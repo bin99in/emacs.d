@@ -3,16 +3,16 @@
 ;;; Code:
 
 (use-package evil
+  :init
+  (setq evil-want-integration nil)
+  (setq evil-want-C-u-delete t)
+  (setq evil-disable-insert-state-bindings t)
   :config
   (add-to-list 'evil-buffer-regexps '("*GNU Emacs*" . emacs))
   (add-to-list 'evil-buffer-regexps '("*info*" . emacs))
   (add-to-list 'evil-buffer-regexps '("*xref*" . emacs))
   (evil-set-initial-state 'dired-mode 'emacs)
   (evil-set-initial-state 'ibuffer-mode 'emacs)
-  (setq evil-want-integration nil)
-  (setq evil-want-C-u-delete t)
-  (setq evil-disable-insert-state-bindings t)
-  (setq evil-disable-insert-state-bindings t)
   (evil-mode 1))
 
 ;; # and * search selection if visual mode actived
@@ -22,11 +22,11 @@
   (setq evil-visualstar/persistent t)
   (global-evil-visualstar-mode))
 
-;; SPC follow a motion
-(use-package evil-easymotion
-  :after evil
-  :config
-  (evilem-default-keybindings "SPC"))
+;; ;; SPC follow a motion
+;; (use-package evil-easymotion
+;;   :after evil
+;;   :config
+;;   (evilem-default-keybindings "SPC"))
 
 ;; highlight t f operator
 (use-package evil-snipe
