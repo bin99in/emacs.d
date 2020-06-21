@@ -1,5 +1,7 @@
-places
-vimish-fold/
-backups/
 auto-save-list/
+amx-items
+backups/
+elpa-*/
+places
 recentf
+vimish-fold/
