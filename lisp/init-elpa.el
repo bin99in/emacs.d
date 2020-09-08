@@ -14,17 +14,17 @@
         ;; Use either 163 or tsinghua mirror repository when official melpa
         ;; is slow or shutdown.
 
-        ;; {{ Option 1: 163 mirror repository:
-        ("gnu" . "https://mirrors.163.com/elpa/gnu/")
-        ("melpa" . "https://mirrors.163.com/elpa/melpa/")
-        ("melpa-stable" . "https://mirrors.163.com/elpa/melpa-stable/")
-        ;; }}
+        ;; ;; {{ Option 1: 163 mirror repository:
+        ;; ("gnu" . "https://mirrors.163.com/elpa/gnu/")
+        ;; ("melpa" . "https://mirrors.163.com/elpa/melpa/")
+        ;; ("melpa-stable" . "https://mirrors.163.com/elpa/melpa-stable/")
+        ;; ;; }}
 
-        ;; ;; {{ Option 2: tsinghua mirror repository
-        ;; ;; @see https://mirror.tuna.tsinghua.edu.cn/help/elpa/ on usage:
-        ;; ;; ("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-        ;; ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-        ;; ("melpa-stable" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa-stable/")
+        ;; {{ Option 2: tsinghua mirror repository
+        ;; @see https://mirror.tuna.tsinghua.edu.cn/help/elpa/ on usage:
+        ("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+        ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+        ("melpa-stable" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa-stable/")
         ;; }}
         ))
 

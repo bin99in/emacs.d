@@ -8,11 +8,15 @@
   (setq evil-want-C-u-delete t)
   (setq evil-disable-insert-state-bindings t)
   :config
-  (add-to-list 'evil-buffer-regexps '("*GNU Emacs*" . emacs))
-  (add-to-list 'evil-buffer-regexps '("*info*" . emacs))
-  (add-to-list 'evil-buffer-regexps '("*xref*" . emacs))
+  ;; emacs state
+  (add-to-list 'evil-buffer-regexps '("^\\*GNU Emacs\\*$" . emacs))
+  (add-to-list 'evil-buffer-regexps '("^\\*info\\*$" . emacs))
+  (add-to-list 'evil-buffer-regexps '("^\\*xref\\*$" . emacs))
   (evil-set-initial-state 'dired-mode 'emacs)
   (evil-set-initial-state 'ibuffer-mode 'emacs)
+  ;; motion state
+  (add-to-list 'evil-buffer-regexps '("^\\*helpful .*\\*$" . motion))
+  (add-to-list 'evil-buffer-regexps '("^\\*Messages\\*$" . motion))
   (evil-mode 1))
 
 ;; # and * search selection if visual mode actived
@@ -37,7 +41,7 @@
 ;; zf zd zj zk
 (use-package evil-vimish-fold
   :after evil
-  :hook ((prog-mode) . evil-vimish-fold-mode))
+  :hook ((prog-mode json-mode) . evil-vimish-fold-mode))
 
 ;; cx
 ;; cxc cancel; cxx exchange whole line
@@ -83,17 +87,18 @@
   (:map evil-outer-text-objects-map
         ("a" . evil-outer-arg))
 
-  ;; bind evil-forward/backward-args
-  (:map evil-normal-state-map
-        ("L" . evil-forward-arg)
-        ("H" . evil-backward-arg))
-  (:map evil-motion-state-map
-        ("L" . evil-forward-arg)
-        ("H" . evil-backward-arg))
+  ;; ;; bind evil-forward/backward-args
+  ;; (:map evil-normal-state-map
+  ;;       ("L" . evil-forward-arg)
+  ;;       ("H" . evil-backward-arg))
+  ;; (:map evil-motion-state-map
+  ;;       ("L" . evil-forward-arg)
+  ;;       ("H" . evil-backward-arg))
 
-  ;; bind evil-jump-out-args
-  (:map evil-normal-state-map
-        ("K" . evil-jump-out-args)))
+  ;; ;; bind evil-jump-out-args
+  ;; (:map evil-normal-state-map
+  ;;       ("K" . evil-jump-out-args))
+  )
 
 ;; textobj indent mapped in i/I/J
 (use-package evil-indent-plus

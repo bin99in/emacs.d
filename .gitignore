@@ -1,7 +1,12 @@
+#*#
+*~
 auto-save-list/
 amx-items
 backups/
+custom.el
 elpa-*/
 places
+projectile-bookmarks.eld
 recentf
+tramp
 vimish-fold/

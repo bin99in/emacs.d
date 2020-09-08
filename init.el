@@ -40,10 +40,22 @@
 ;;----------------------------------------------------------------------------
 
 (require 'init-better-default)
+(require 'init-which-key)
+(require 'init-helpful)
 (require 'init-keyfreq)
 (require 'init-undo-tree)
 (require 'init-evil)
 (require 'init-ivy)
+(require 'init-company)
+(require 'init-yasnippet)
+(require 'init-flycheck)
+(require 'init-magit)
+
+(require 'init-lsp)
+(require 'init-javascript)
+(require 'init-json)
+(require 'init-emmet)
+(require 'init-vue)
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
